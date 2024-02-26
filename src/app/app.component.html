@@ -1,0 +1,28 @@
+<div *ngIf="!isLoggedIn">
+  <app-login></app-login>
+</div>
+<div class="wrapper" *ngIf="isLoggedIn">
+  <div class="left-sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="main-area">
+    <app-navbar (showUserInfo)="showUserInfoDropdown($event)"></app-navbar>
+    <div *ngIf="showUserDropdown" class="dropdown-content">
+        <div
+          class="profile-img"
+          [style.background-image]="'url(./../../../assets/avatar.png)'"
+        ></div>
+        <h2>{{loggedUSer.firstName}} {{loggedUSer.lastName}}</h2>
+        <span>Edit Profile</span><fa-icon [icon]="faEdit" ></fa-icon>
+        <h3>My Options</h3>
+        <div class="myOptions" >
+          <p>Designation: {{loggedUSer.firstName}}</p>
+          <p>Sitemap: Jaipur</p> 
+          <p>Position: {{loggedUSer.role}}</p>
+          <p>Age@Met: {{loggedUSer.years}}</p>
+        </div>
+      <button (click)="logout()">Sign out</button>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

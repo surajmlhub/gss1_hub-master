@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="heading">
+       <span>Upcoming Work Anniversary</span>
+    </div>
+    <div class="main">
+        <div class="">
+            <input type="text" name="" ngModel [formControl]="searchText" placeholder="Search Employee" id="">
+        </div>
+        <div class="cards">
+            <app-profile-card *ngFor="let employee of filteredUpcomingWorkAnniversary" [employee]="employee"  ></app-profile-card>
+        </div>
+    </div>
+</div>

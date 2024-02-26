@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="top"></div>
+  <div class="profile-img" *ngIf="!!employee.profileImg;else initials" [style.background-image]="'url(' + employee.profileImg + ')'"  >
+   
+  </div>
+  <ng-template  #initials>
+    <div  class="profile-img">
+      <h2>{{employee.firstName[0]}} {{employee.lastName[0]}}</h2>
+    </div>
+  </ng-template>   
+  <div class="bottom">
+    <h2>{{employee.firstName}} {{employee.lastName}}</h2>
+    <p class="title">Designation: {{employee.role}}</p>
+    <p>Completing {{employee.years}}</p>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.container {
+    margin: 1rem;
+    border: 1px solid rgb(167, 167, 167);
+}
+
+.heading {
+    background-color: rgb(74, 74, 176);
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    padding: 1rem;
+    padding-top: 1rem;
+}
+
+input {
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+    margin-right: 1rem;
+    float: right;
+    border: 1px solid gray;
+    margin-top: 1rem;
+}

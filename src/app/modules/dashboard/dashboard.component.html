@@ -1,0 +1,31 @@
+<div class="container">
+   <div class="left">
+    <div class="menu-item" (click)="handleClickLeft(menuItem)" [ngClass]="menuItem.active ? 'active' : ''" *ngFor="let menuItem of leftMenu">
+       <fa-icon [icon]="menuItem.icon" size="xl" ></fa-icon>
+       <p>{{menuItem.label}}</p>
+    </div>
+   </div>
+   <div class="center">
+    <div style="display: flex;flex-wrap: wrap;">
+        <div class="item"  (click)="handleClickCenter(menuItem)"  *ngFor="let menuItem of centerMenu">
+           <fa-icon [icon]="menuItem.icon" size="xl" ></fa-icon>
+           <p>{{menuItem.label}}</p>
+        </div>
+    </div>
+   </div>
+   <div class="right">
+      <div class="right-top">
+         <h2>Your Journey</h2>
+      </div>
+      <div class="right-bottom">
+          <div *ngFor="let employ of upcomingWorkAnniversary" class="right-item" >
+              <img src="./../../../assets/avatar.png" height="50" width="80" alt="img">
+              <h3>{{employ.firstName}} {{employ.lastName}}</h3>
+              <p>Completing {{employ.years}} years.</p>
+          </div>
+          <div class="view-more">
+            <p [routerLink]="['your-journey']" >View All</p>
+          </div>
+         </div>
+   </div>
+</div>

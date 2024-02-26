@@ -1,0 +1,19 @@
+<div class="sidebar">
+  <div class="top" (click)="toggle()">
+    <fa-icon [icon]="faGrip" size="2xl"></fa-icon>
+  </div>
+  <div [ngClass]="isVisible ? 'show' : 'hide'">
+    <div class="menu-item">
+      <fa-icon [icon]="faGlobe" size="2xl"></fa-icon>
+      <p>Internet</p>
+    </div>
+    <div class="menu-item">
+      <fa-icon [icon]="faUser" size="2xl"></fa-icon>
+      <p>Profile</p>
+    </div>
+    <div class="menu-item" >
+      <fa-icon [icon]="faCar" size="2xl"></fa-icon>
+      <p>ETMS</p>
+    </div>
+  </div>
+</div>

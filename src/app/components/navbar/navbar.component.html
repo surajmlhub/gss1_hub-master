@@ -1,0 +1,21 @@
+<!-- Top navigation -->
+<div class="topnav">
+  <div>
+    <a [routerLink]="['/dashboard']" class="active">
+    <img src="./../../../assets/logo_hub.png" height="40" width="100" />
+    </a>
+  </div>
+
+  <div class="topnav-centered">
+    <a [routerLink]="['/dashboard']" class="active">
+      <img src="./../../../assets/MetLife.png" />
+    </a>
+  </div>
+
+  <div class="topnav-right">
+    <input type="text" placeholder="Search..." />
+    <fa-icon [icon]="faBell" size="xl"></fa-icon>
+    <span>logged user:</span>
+    <div class="user" (click)="handleUserClick()" >{{loggedUSer.firstName}}</div>
+  </div>
+</div>

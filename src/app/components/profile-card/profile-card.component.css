@@ -1,0 +1,50 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+    margin: 1rem;
+}
+
+.top {
+    height: 150px;
+    background-color: rgb(71, 119, 151);
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.profile-img {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background-color: rgb(17, 71, 16);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.profile-img h2 {
+    color: white;
+}
+
+/* img {
+    border-radius: 5%;
+} */
+
+.bottom {
+    padding: 20px;
+}
+
+.bottom h2 {
+    margin-top: 15%;
+}
